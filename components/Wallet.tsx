@@ -1,6 +1,8 @@
 import React from "react";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import useModal from "@/hooks/useModal";
+import Modal from "./Modal";
 
 interface WalletProps {
   wallet: {
@@ -25,6 +27,8 @@ const Wallet: React.FC<WalletProps> = ({
   visibleKeys,
   setVisibleKeys,
 }) => {
+  const {modalOpen, close, open} = useModal()
+
   return (
     <div
       key={wallet.type}
@@ -42,9 +46,39 @@ const Wallet: React.FC<WalletProps> = ({
               </h3>
               <MdDelete
                 className="cursor-pointer mt-2 w-[1rem]"
-                onClick={() => handleWalletDelete(wallet.type, keyPair)}
+                onClick={() => open()}
               />
             </div>
+            <Modal
+              modalOpen={modalOpen}
+              close={close}
+              open={open}
+              onClose={() => {}}
+            >
+              <div className=" p-1 md:p-4 text-black m-[1rem] md:m-0 ">
+                <h3 className="md:text-xl text-2xl  font-semibold">
+                  Are you sure you want to delete this wallet?
+                </h3>
+                <p className="md:text-md text-lg my-2">
+                  This action cannot be undone and will delete your data from
+                  local storage
+                </p>
+                <div className="flex gap-4 mt-4">
+                  <button
+                    className="btn btn-gray"
+                    onClick={() => {
+                      handleWalletDelete(wallet.type, keyPair);
+                      close();
+                    }}
+                  >
+                    Yes
+                  </button>
+                  <button className="btn" onClick={close}>
+                    No
+                  </button>
+                </div>
+              </div>
+            </Modal>
             <div className="w-full">
               <span className="block text-lg md:text-xl font-semibold mb-3">
               Public Key{" "}
