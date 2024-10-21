@@ -144,7 +144,7 @@ const WalletGenerator: React.FC<WalletGeneratorProps> = ({
 
   return (
     <>
-      <div className="w-full flex flex-col gap-4 items-center min-h-[100vh] py-[2rem] md:p-[3rem] text-white">
+      <div className="w-full flex flex-col gap-4 items-center min-h-[100vh]  md:p-[3rem] text-white">
         <MnemonicDisplay
           mnemonic={mnemonic}
           handleProceedClick={handleScroll}
