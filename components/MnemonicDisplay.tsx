@@ -27,12 +27,12 @@ const MnemonicDisplay = ({ mnemonic, handleProceedClick }: MnemonicDisplayProps)
             return (
               <div
                 key={index}
-                className="text-white rounded-md font-semibold text-md "
+                className="text-white rounded-md font-semibold text-md truncate"
               >
-                <span className="mr-3 text-opacity-25 text-white">
+                <span className="mr-3 text-opacity-25 text-white ">
                   {index + 1}
                 </span>
-                 {word}
+                <span>{word}</span>
               </div>
             );
           })}
