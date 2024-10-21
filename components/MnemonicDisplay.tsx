@@ -3,7 +3,7 @@ import {useState} from 'react'
 
 interface MnemonicDisplayProps {
   mnemonic: string[];
-  handleProceedClick: (arg: number) => void;
+  handleProceedClick: (id: string) => void;
   
 }
 const MnemonicDisplay = ({ mnemonic, handleProceedClick }: MnemonicDisplayProps) => {
@@ -14,7 +14,7 @@ const MnemonicDisplay = ({ mnemonic, handleProceedClick }: MnemonicDisplayProps)
 
   return (
     <>
-      <h3 className="text-4xl mb-3 text-center font-semibold">Secret Recovery Phrase</h3>
+      <h3  className="text-4xl mb-3 text-center font-semibold">Secret Recovery Phrase</h3>
       <p className="text-lg text-white text-opacity-60 mb-6">
         Save these words in a safe place
       </p>
@@ -49,7 +49,7 @@ const MnemonicDisplay = ({ mnemonic, handleProceedClick }: MnemonicDisplayProps)
         </p>
       </div>
 
-      <button className=" btn btn-green mt-[3rem]" onClick={() => handleProceedClick(2)}>
+      <button className=" btn btn-green mt-[3rem]" onClick={() => handleProceedClick('addWallet')}>
         Proceed
       </button>
     </>

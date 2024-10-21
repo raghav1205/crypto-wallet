@@ -4,7 +4,7 @@ import BlockchainAnimation from "./BlockchainAnimation";
 
 
 interface HomeScreenProps {
-    handleScroll: (arg?: number) => void;
+    handleScroll: (arg?: string) => void;
 }
 
 const HomeScreen: React.FC<HomeScreenProps> = ({ handleScroll }) => {
@@ -18,7 +18,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ handleScroll }) => {
                     <p className="text-lg md:text-xl text-gray-300 mb-4">
                         Generate your own wallet in seconds
                     </p>
-                    <button className="text-xl p-2.5 mt-8 bg-green-500 btn btn-green" onClick={() => handleScroll()}>
+                    <button className="text-xl p-2.5 mt-8 bg-green-500 btn btn-green" onClick={() => handleScroll('mnemonicDisplay')}>
                         Get Started
                     </button>
                 </div>

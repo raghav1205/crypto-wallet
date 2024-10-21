@@ -26,7 +26,7 @@ interface KeyPair {
 }
 
 interface WalletGeneratorProps {
-  handleScroll: () => void;
+  handleScroll: (id: string) => void;
 }
 
 const WalletGenerator: React.FC<WalletGeneratorProps> = ({
@@ -144,14 +144,14 @@ const WalletGenerator: React.FC<WalletGeneratorProps> = ({
 
   return (
     <>
-      <div className="w-full flex flex-col gap-4 items-center min-h-[100vh]  md:p-[3rem] text-white">
+      <div className="w-full flex flex-col gap-4 py-[2rem] items-center min-h-[100vh]  md:p-[3rem] text-white" id="mnemonicDisplay">
         <MnemonicDisplay
           mnemonic={mnemonic}
           handleProceedClick={handleScroll}
         />
       </div>
 
-      <div className="min-h-[100vh]  w-full">
+      <div className="min-h-[100vh] pt-[2rem] w-full" id={'addWallet'}>
         <div className="flex gap-4 mt-0">
           {options.map((item) => {
             return (
@@ -170,7 +170,7 @@ const WalletGenerator: React.FC<WalletGeneratorProps> = ({
           })}
         </div>
 
-        <div className="mt-6  md:ml-auto">
+        <div className="mt-6   md:ml-auto"  >
           <button
             className="font-semibold disabled:opacity-70 btn mr-4 disabled:text-black"
             onClick={handleAddWallet}
