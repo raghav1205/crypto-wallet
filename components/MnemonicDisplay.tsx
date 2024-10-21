@@ -27,19 +27,19 @@ const MnemonicDisplay = ({ mnemonic, handleProceedClick }: MnemonicDisplayProps)
             return (
               <div
                 key={index}
-                className="text-white rounded-md font-semibold text-md"
+                className="text-white rounded-md font-semibold text-md "
               >
                 <span className="mr-3 text-opacity-25 text-white">
                   {index + 1}
                 </span>
-                {word}
+                 {word}
               </div>
             );
           })}
         </div>
         <p className="w-[98%] mx-auto border-[#494b55] border-t flex justify-center  pt-2 text-sm text-opacity-60 text-gray-100" onClick = {() => {
           setCardClicked(true)
-          setInterval(() => {
+          setTimeout(() => {
             setCardClicked(false)
         },5000)
         }}>
