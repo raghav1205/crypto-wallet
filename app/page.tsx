@@ -3,8 +3,9 @@ import HomeScreen from "@/components/Home";
 import Navbar from "@/components/Navbar";
 import WalletGenerator from "@/components/WalletGenerator";
 import { useIsClient } from "@uidotdev/usehooks";
+
 export default function Home() {
-  
+
   const handleScroll = (targetId: string) => {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {

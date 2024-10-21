@@ -4,7 +4,7 @@ import BlockchainAnimation from "./BlockchainAnimation";
 
 
 interface HomeScreenProps {
-    handleScroll: (arg?: string) => void;
+    handleScroll: (id: string) => void;
 }
 
 const HomeScreen: React.FC<HomeScreenProps> = ({ handleScroll }) => {
