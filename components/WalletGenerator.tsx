@@ -48,7 +48,7 @@ const WalletGenerator: React.FC<WalletGeneratorProps> = ({
     }
     if(wallets.length !== 0){
       const nonEmptyWallet = wallets.find(w => w.wallets.length != 0)
-      setCurrentOption(nonEmptyWallet.type)
+      if(nonEmptyWallet) setCurrentOption(nonEmptyWallet.type)
     }
   }, []);
 

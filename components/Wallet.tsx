@@ -16,7 +16,7 @@ interface WalletProps {
 }
 
 const handleKeyClick = (key: string) => {
-  navigator.clipboard.writeText()
+  navigator.clipboard.writeText(key)
 }
 
 const Wallet: React.FC<WalletProps> = ({
