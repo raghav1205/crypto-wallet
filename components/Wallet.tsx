@@ -50,7 +50,7 @@ const Wallet: React.FC<WalletProps> = ({
               Public Key{" "}
               </span>
              
-              <span  className="text-black text-opacity-80 truncate block max-w-[600px]" onClick ={() => handleKeyClick(keypair.publicKey)}>
+              <span  className="text-black text-opacity-80 truncate block max-w-[600px]" onClick ={() => handleKeyClick(keyPair.publicKey)}>
               {keyPair.publicKey}
               </span>
             </div>
