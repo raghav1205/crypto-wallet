@@ -2,22 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+body {
+  background: linear-gradient(176deg, rgba(18,24,27,1) 50%, rgba(32,39,55,1) 100%);
+  min-height: 100vh;
+ 
+  
+  background-attachment: fixed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.btn {
+  @apply bg-white text-black font-sans uppercase font-bold inline-flex cursor-pointer text-center shadow-md no-underline px-5 py-2 text-sm transition-all duration-150 my-0.5;
+  &.glow {
+      @apply hover:drop-shadow-[0_0_4px_rgba(225,225,225,0.5)];
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.glow {
+    @apply  hover:translate-y-[-2px];
+}
+
+
+.btn-green {
+  @apply bg-green-500 text-white hover:bg-green-600 active:bg-green-700;
+  &.glow {
+      @apply hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.5)];
+  }
+}
+
+.btn-blue {
+  @apply bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700;
+  &.glow {
+      @apply hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.5)];
+  }
+}
+
+.btn-yellow {
+  @apply bg-yellow-500 text-white hover:bg-yellow-600 active:bg-yellow-700;
+  &.glow {
+      @apply hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.5)];
+  }
+}
+
+.btn-purple {
+  @apply bg-purple-500 text-white hover:bg-purple-600 active:bg-purple-700;
+  &.glow {
+      @apply hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.5)];
+  }
+}
+
+.btn-orange {
+  @apply bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700;
+  &.glow {
+      @apply hover:drop-shadow-[0_0_5px_rgba(34,197,94,0.5)];
+  }
+}
+
+.btn-red {
+  @apply bg-red-500 text-white hover:bg-red-600 active:bg-red-700;
+  &.glow {
+      @apply hover:drop-shadow-[0_0_5px_rgba(239,68,68,0.5)];
+  }
+}
+
+
+.btn-gray {
+  @apply bg-[#454e56] text-white hover:bg-[#6c7983];
+  &.glow {
+      @apply hover:drop-shadow-[0_0_5px_rgba(239,68,68,0.5)];
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.5);
+  border-radius: 8px;
 }
 
 @layer utilities {
