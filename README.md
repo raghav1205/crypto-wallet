@@ -12,8 +12,8 @@
 
 ## Tech Stack
 
-- **Frontend**: [Next.js](https://nextjs.org/)
-- **Backend**: TypeScript, Web3.js, Solana Web3.js, HD Key Generation (BIP32/BIP39/BIP44)
+- **Frontend**: [Next.js](https://nextjs.org/), TypeScript
+- **Libraries**:  Web3.js, Solana Web3.js, HD Key Generation (BIP32/BIP39/BIP44)
 - **Blockchain Support**: Solana (SOL), Ethereum (ETH)
 
   
